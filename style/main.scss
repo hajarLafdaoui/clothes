@@ -1,0 +1,144 @@
+// main.scss
+
+// Importing partials
+@import 'variables';
+@import 'global';
+@import 'mixins';
+
+.container {
+    @include flex-container(start, start);
+}
+
+.categories {
+    @include flex-container(start);
+    gap: 15px;
+    
+
+    input {
+        border: none;
+        outline: none;
+        padding: 14px;
+        border-radius: 30px;
+        background-color: $primary_color;
+    }
+}
+
+.main {
+    // margin-left: 20px;
+    // !!!
+    // padding: 30px;
+
+    .crads {
+        // @include flex-container(row, wrap); // Ensure cards are aligned in a row with wrapping
+        gap: 30px; // Space between the cards
+        display: flex;
+        padding: 30px;
+        flex-wrap: wrap;
+    
+    }
+    h1 {
+        margin: 30px 20px;
+    }
+
+    .card {
+        padding: 24px;
+        background-color: $primary_color;
+        border-radius: 20px;
+        width: 294px; // Fixed width to align cards side by side
+        height: 516px;
+
+        .body-card {
+            @include flex-container(flex-start); // Adjusted alignment as needed
+            gap: 16px;
+
+            .Pantalons {
+                font-size: 14px;
+                color: $text_color_light;
+            }
+
+            .p1 {
+                font-size: 18px;
+            }
+
+            .price {
+                font-size: 24px;
+                font-weight: bold;
+
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .colors {
+            @include flex-container(start, start); // Adjusted alignment as needed
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .colors-container {
+                background-color: $background_color;
+                @include flex-container(); // Adjusted alignment as needed
+                border-radius: 40px;
+                padding: 6px 7px;
+                gap: 10px;
+                width: fit-content;
+
+                .circle {
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+
+                    &.color-Noir {
+                        background-color: black;
+                    }
+                    &.color-Blanc {
+                        background-color: $primary_color;
+                    }
+                    &.color-Bleu-foncé {
+                        background-color: $dark_blue;
+                    }
+                    &.color-Marron {
+                        background-color: $secondary_color;
+                    }
+                    &.color-Vert {
+                        background-color: $green;
+                    }
+                }
+            }
+        }
+
+        .Marron,
+        .M {
+            border: 1px solid black;
+        }
+
+        hr {
+            margin: 20px 0;
+            width: 220px;
+        }
+
+        .btn {
+            @include button-style($secondary_color);
+        }
+    }
+
+    .taille {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .size {
+        background-color: $background_color;
+        border-radius: 40px;
+        padding: 6px 16.5px;
+        font-weight: 600;
+    }
+
+    .Couleur {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 20px 0 10px 0;
+    }
+}

@@ -1,0 +1,18 @@
+// _mixins.scss
+
+// A mixin for flex containers
+@mixin flex-container($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+// A mixin for reusable button styles
+@mixin button-style($bg-color, $text-color: $primary_color) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    padding: 14px 59px;
+    border-radius: 12px;
+}
