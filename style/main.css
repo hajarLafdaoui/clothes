@@ -16,29 +16,71 @@ body {
   flex-direction: row;
 }
 
-.categories {
+.left-side {
+  padding-top: 30px;
+  gap: 0;
+  display: flex;
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: space-between; /* Space out children */
+  height: 100vh; /* Full height to push items accordingly */
+  background-color: #fff;
+}
+.left-side .left-side-logo {
+  width: 46px;
+  height: 45px;
+  background-color: #965E47;
+  border-radius: 56px;
+  margin: 0 auto;
+}
+.left-side .left-side-items-container .left-side-items-container-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 17.5px;
+}
+.left-side .left-side-items-container .left-side-items-container-item .left-side-item {
+  color: #000;
+  text-decoration: none;
+}
+.left-side .left-side-items-container .left-side-items-container-item.brown-icon {
+  background-color: #965E47;
+  border-radius: 16px;
+}
+.left-side .left-side-logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.left-side .left-side-logout .left-side-item {
+  color: #000;
+  text-decoration: none;
+}
+
+.main {
+  padding: 30px;
+}
+.main .categories {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: row;
   gap: 15px;
+  margin: 21px 0;
 }
-.categories input {
+.main .categories input {
   border: none;
   outline: none;
   padding: 14px;
   border-radius: 30px;
   background-color: #fff;
 }
-
 .main .crads {
   gap: 30px;
   display: flex;
-  padding: 30px;
+  padding-top: 21px;
   flex-wrap: wrap;
-}
-.main h1 {
-  margin: 30px 20px;
 }
 .main .card {
   padding: 24px;
