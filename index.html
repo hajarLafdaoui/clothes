@@ -324,14 +324,35 @@
                         <h4 class="Pantalons">Pantalons</h4>
                         <p class="p1">Pantalon en Jean Léger</p>
                         <div class="panier-item-add-remove">
-                            <input type="button" value="+">1 <input type="button" value="-">
+                            <div class="ops">
+                                <input type="button" value="+"><span>1</span> <input type="button" value="-">
+                            </div>
+                           
                             <div class="panier-item-price">
                                 <p class="price">29.99 €</p>
                             </div>
                         </div>
                     </div>
-                ----------------------------
                 </div>
+                <div class="dots">----------------------------------------------------</div>
+
+                <div class="panier-item">
+                    <img src="images/1.png" alt="">
+                    <div class="panier-item-content">
+                        <h4 class="Pantalons">Pantalons</h4>
+                        <p class="p1">Pantalon en Jean Léger</p>
+                        <div class="panier-item-add-remove">
+                            <div class="ops">
+                                <input type="button" value="+"><span>1</span> <input type="button" value="-">
+                            </div>
+                            <div class="panier-item-price">
+                                <p class="price">29.99 €</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dots">----------------------------------------------------</div>
+
     
                 <div class="panier-item">
                     <img src="images/1.png" alt="">
@@ -339,60 +360,61 @@
                         <h4 class="Pantalons">Pantalons</h4>
                         <p class="p1">Pantalon en Jean Léger</p>
                         <div class="panier-item-add-remove">
-                            <input type="button" value="+">1 <input type="button" value="-">
+                            <div class="ops">
+                                <input type="button" value="+"><span>1</span> <input type="button" value="-">
+                            </div>
                             <div class="panier-item-price">
                                 <p class="price">29.99 €</p>
                             </div>
                         </div>
                     </div>
-                ----------------------------
                 </div>
-    
-                <div class="panier-item">
-                    <img src="images/1.png" alt="">
-                    <div class="panier-item-content">
-                        <h4 class="Pantalons">Pantalons</h4>
-                        <p class="p1">Pantalon en Jean Léger</p>
-                        <div class="panier-item-add-remove">
-                            <input type="button" value="+">1 <input type="button" value="-">
-                            <div class="panier-item-price">
-                                <p class="price">29.99 €</p>
-                            </div>
-                        </div>
-                    </div>
-                ----------------------------
-                </div>
+                <div class="dots">----------------------------------------------------</div>
             </div>
     
             <div class="totalPrice">
-                <p>Total</p>
-                <p class="previousPrice">Total: 89.97 €</p>
-                <p class="currentPrice">Total: 89.97 €</p>
+                <h1>Total</h1>
+                <div class="prix">
+                    <p class="previousPrice"> 89.97 €</p>
+                    <p class="currentPrice"> 89.97 €</p>
+                </div>
             </div>
     
             <div class="paying-inputs">
                 <div class="first-input">
-                    <label for="">Espèce</label>
-                    <div class="input-group">
+                    <fieldset class="input-group">
+                        <legend>Espèce</legend>
                         <input type="text" value="1000.00">
-                        <input type="btn" value="23.00">
-                    </div>
+                        <input type="text" value="23.00">
+                    </fieldset>
                 </div>
+                
+                
+                
+                
                 <div class="second-input">
-                    <label for="">Réduction</label>
-                    <input type="text" value="100.00">
+                    <fieldset class="input-group">
+                        <legend>Réduction</legend>
+                        <input type="text" value="100.00">
+                </fieldset>
+
                 </div>
             </div>
+
             <div class="paying-valid-buttons">
-                <div class="btn1">
-                    <img src="rightSideIcons/cash.png" alt="">
-                    <p>Espèce</p>
+                <div class="comBtns">
+                    <div class="btn1">
+                        <img src="rightSideIcons/cash.png" alt="">
+                        <p>Espèce</p>
+                    </div>
+                    <div class="btn2">
+                        <img src="rightSideIcons/cart.png" alt="">
+                        <p>Carte</p>
+                    </div>
                 </div>
-                <div class="btn2">
-                    <img src="rightSideIcons/cart.png" alt="">
-                    <p>Carte</p>
-                </div>
+               
                 <div class="btn3">
+
                     <p>Valide</p>
                 </div>
             </div>
