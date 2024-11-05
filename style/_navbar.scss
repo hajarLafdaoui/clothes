@@ -1,0 +1,45 @@
+
+.left-side{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    background-color: $primary_color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 30px ;
+
+
+    .left-side-logo{
+        width: 46px;
+        height: 45px;
+        background-color: $secondary_color;
+        border-radius: 56px;
+        margin: 0 auto;
+    }
+    .left-side-items-container{
+        
+        .left-side-items-container-item{
+            @include flex-container(center, center, column);
+            padding: 15px 17.5px;
+            .left-side-item{
+                color: #000;
+                text-decoration: none;
+            }    
+            &.brown-icon{
+                background-color: $secondary_color;
+                border-radius: 16px;
+            }
+        }    
+    }
+    
+    .left-side-logout {
+        @include flex-container(center, center, column); 
+        .left-side-item {
+            color: #000;
+            text-decoration: none; 
+
+        }
+    }
+}

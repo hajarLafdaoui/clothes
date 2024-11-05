@@ -1,6 +1,4 @@
-// _mixins.scss
 
-// A mixin for flex containers
 @mixin flex-container($justify: center, $align: center, $direction: row) {
     display: flex;
     justify-content: $justify;
@@ -8,7 +6,6 @@
     flex-direction: $direction;
 }
 
-// A mixin for reusable button styles
 @mixin button-style($bg-color, $text-color: $primary_color) {
     background-color: $bg-color;
     color: $text-color;

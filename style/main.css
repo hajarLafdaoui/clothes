@@ -10,21 +10,85 @@ body {
   overflow-x: hidden;
 }
 
-.container {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  flex-direction: row;
+@media (min-width: 768px) and (max-width: 1026px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+  }
+  .main {
+    flex: 2;
+    width: 100%;
+    order: 1;
+  }
+  .right-side {
+    flex: 1;
+    background-color: lightblue;
+    order: 2;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    margin-left: 120px;
+    padding-bottom: 150px !important;
+  }
+  .totalPrice {
+    margin-bottom: 120px !important;
+  }
 }
-
+@media (max-width: 768px) {
+  .left-side {
+    width: 80px;
+    margin-right: 0;
+  }
+  .left-side .left-side-logo {
+    width: 30px;
+    height: 30px;
+  }
+  .left-side .left-side-items-container-item {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .left-side .left-side-logout {
+    font-size: 12px;
+  }
+  .totalPrice {
+    margin-bottom: 100px !important;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+  }
+  .main {
+    order: 1;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0 !important;
+  }
+  .right-side {
+    order: 2;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    margin-left: 80px;
+    width: 100%;
+    padding-right: 30px !important;
+  }
+  .card {
+    width: 100%;
+    gap: 5px;
+  }
+}
 .left-side {
-  padding-top: 30px;
-  gap: 0;
   display: flex;
-  flex-direction: column; /* Arrange children in a column */
-  justify-content: space-between; /* Space out children */
-  height: 100vh; /* Full height to push items accordingly */
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding-top: 30px;
 }
 .left-side .left-side-logo {
   width: 46px;
@@ -59,135 +123,12 @@ body {
   text-decoration: none;
 }
 
-.main {
-  padding: 30px;
-}
-.main .categories {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: row;
-  gap: 15px;
-  margin: 21px 0;
-}
-.main .categories input {
-  border: none;
-  outline: none;
-  padding: 14px;
-  border-radius: 30px;
-  background-color: #fff;
-}
-.main .crads {
-  gap: 30px;
-  display: flex;
-  padding-top: 21px;
-  flex-wrap: wrap;
-}
-.main .card {
-  padding: 24px;
-  background-color: #fff;
-  border-radius: 20px;
-  width: 294px;
-  height: 516px;
-}
-.main .card .body-card {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  gap: 16px;
-}
-.main .card .body-card .Pantalons {
-  font-size: 14px;
-  color: #B3B3B3;
-}
-.main .card .body-card .p1 {
-  font-size: 18px;
-}
-.main .card .body-card .price {
-  font-size: 24px;
-  font-weight: bold;
-}
-.main .card .body-card .price span {
-  font-size: 14px;
-}
-.main .card .colors {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.main .card .colors .colors-container {
-  background-color: #F2F2F2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  border-radius: 40px;
-  padding: 6px 7px;
-  gap: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.main .card .colors .colors-container .circle {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-}
-.main .card .colors .colors-container .circle.color-Noir {
-  background-color: black;
-}
-.main .card .colors .colors-container .circle.color-Blanc {
-  background-color: #fff;
-}
-.main .card .colors .colors-container .circle.color-Bleu-foncé {
-  background-color: #0D0072;
-}
-.main .card .colors .colors-container .circle.color-Marron {
-  background-color: #965E47;
-}
-.main .card .colors .colors-container .circle.color-Vert {
-  background-color: #007F1B;
-}
-.main .card .Marron,
-.main .card .M {
-  border: 1px solid black;
-}
-.main .card hr {
-  margin: 20px 0;
-  width: 220px;
-}
-.main .card .btn {
-  background-color: #965E47;
-  color: #fff;
-  border: none;
-  padding: 14px 59px;
-  border-radius: 12px;
-}
-.main .taille {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.main .size {
-  background-color: #F2F2F2;
-  border-radius: 40px;
-  padding: 6px 16.5px;
-  font-weight: 600;
-}
-.main .Couleur {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 20px 0 10px 0;
-}
-
 .right-side {
   background-color: #fff;
   padding: 30px;
-  margin-right: 300px;
+  margin-right: 100px;
+  padding-bottom: 900px;
+  height: 100vh;
 }
 .right-side .panier {
   display: flex;
@@ -393,4 +334,147 @@ body {
   font-weight: bold;
   color: #fff;
   border-radius: 12px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: crow;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.main {
+  margin-left: 100px;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+}
+.main .categories {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+  margin: 21px 0;
+}
+.main .categories input {
+  border: none;
+  outline: none;
+  padding: 14px;
+  border-radius: 30px;
+  background-color: #fff;
+}
+.main .crads {
+  gap: 30px;
+  display: flex;
+  padding-top: 21px;
+  flex-wrap: wrap;
+}
+.main .card {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 294px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  max-width: 294px;
+}
+.main .card .body-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+}
+.main .card .body-card .Pantalons {
+  font-size: 14px;
+  color: #B3B3B3;
+}
+.main .card .body-card .p1 {
+  font-size: 18px;
+}
+.main .card .body-card .price {
+  font-size: 24px;
+  font-weight: bold;
+}
+.main .card .body-card .price span {
+  font-size: 14px;
+}
+.main .card .colors {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.main .card .colors .colors-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #F2F2F2;
+  border-radius: 40px;
+  padding: 6px 7px;
+  gap: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main .card .colors .colors-container .circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.main .card .colors .colors-container .circle.color-Noir {
+  background-color: black;
+}
+.main .card .colors .colors-container .circle.color-Blanc {
+  background-color: #fff;
+}
+.main .card .colors .colors-container .circle.color-Bleu-foncé {
+  background-color: #0D0072;
+}
+.main .card .colors .colors-container .circle.color-Marron {
+  background-color: #965E47;
+}
+.main .card .colors .colors-container .circle.color-Vert {
+  background-color: #007F1B;
+}
+.main .card .Marron,
+.main .card .M {
+  border: 1px solid black;
+}
+.main .card hr {
+  margin: 20px 0;
+  width: 220px;
+}
+.main .card .btn {
+  background-color: #965E47;
+  color: #fff;
+  border: none;
+  padding: 14px 59px;
+  border-radius: 12px;
+}
+.main .taille {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.main .size {
+  background-color: #F2F2F2;
+  border-radius: 40px;
+  padding: 6px 16.5px;
+  font-weight: 600;
+}
+.main .Couleur {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
 }/*# sourceMappingURL=main.css.map */
